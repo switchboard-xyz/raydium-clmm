@@ -159,7 +159,7 @@ pub fn get_account_extensions<'data, S: BaseState>(
 ) -> Vec<ExtensionStruct> {
     let mut extensions: Vec<ExtensionStruct> = Vec::new();
     let extension_types = account_state.get_extension_types().unwrap();
-    println!("extension_types:{:?}", extension_types);
+
     for extension_type in extension_types {
         match extension_type {
             ExtensionType::ConfidentialTransferAccount => {
@@ -333,7 +333,6 @@ pub fn get_out_put_amount_and_remaining_accounts(
         tickarray_bitmap_extension,
         tick_arrays,
     )?;
-    println!("tick_array_start_index:{:?}", tick_array_start_index_vec);
 
     Ok((amount_calculated, tick_array_start_index_vec))
 }

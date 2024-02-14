@@ -1,3 +1,4 @@
+#![allow(unused_imports, unused_variables, ambiguous_glob_reexports, unused_mut)]
 pub mod create_pool;
 pub use create_pool::*;
 
